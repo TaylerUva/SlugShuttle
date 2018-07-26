@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114842514719992940}
   - component: {fileID: 114491677982691944}
   m_Layer: 8
-  m_Name: slugEgg
+  m_Name: Torpedo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
