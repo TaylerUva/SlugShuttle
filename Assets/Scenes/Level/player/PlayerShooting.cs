@@ -18,6 +18,7 @@ public class PlayerShooting : MonoBehaviour {
             cooldownTimer = fireDelay;
 
             Vector3 torpedoPos = transform.position;
+            torpedoPos.y += 1;
             torpedoPos.z += 1;
 
             Instantiate(bulletPrefab, torpedoPos, transform.rotation);

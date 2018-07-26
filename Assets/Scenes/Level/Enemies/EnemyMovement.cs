@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorpedoMovement : MonoBehaviour {
+public class EnemyMovement : MonoBehaviour {
 
     public int speed = 10;
 	
@@ -11,6 +11,6 @@ public class TorpedoMovement : MonoBehaviour {
         Vector3 pos = transform.position;
         Vector3 velocity = new Vector3(0, speed * Time.deltaTime, 0);
 
-        transform.position += velocity;
+        transform.position -= velocity;
 	}
 }
