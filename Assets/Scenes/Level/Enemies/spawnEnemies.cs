@@ -18,7 +18,7 @@ public class SpawnEnemies : MonoBehaviour {
     // Use this for initialization
     void Start() {
         cam = Camera.main;
-        height = 2f * cam.orthographicSize;
+        height = 1.1f * cam.orthographicSize;
         width = height * cam.aspect;
         spawnTimer = spawnRate;
         Spawn();
@@ -26,7 +26,7 @@ public class SpawnEnemies : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        height = 2f * cam.orthographicSize;
+        height = 1.1f * cam.orthographicSize;
         width = height * cam.aspect;
         if (spawnTimer <= 0) Spawn();
         spawnTimer -= Time.deltaTime;
@@ -36,9 +36,7 @@ public class SpawnEnemies : MonoBehaviour {
         randSprite = Random.Range(0, enemySprites.Length - 1);
         enemyObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(enemySprites[randSprite]);
         randPos = Random.Range(-(width/2), (width/2));
-        Debug.Log(randPos);
         Vector2 position = new Vector2(randPos, height);
-        Debug.Log("SPAWN!");
         spawnTimer = spawnRate;
         Instantiate(enemyObject, position, transform.rotation);
     }

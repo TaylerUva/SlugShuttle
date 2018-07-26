@@ -24,7 +24,13 @@ public class DamageHandler : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         invulnTimer -= Time.deltaTime;
-        if (invulnTimer <= 0) gameObject.layer = originalLayer;
+        if (invulnTimer <= 0) {
+            gameObject.layer = originalLayer;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        } 
+        else {
+            gameObject.GetComponent<SpriteRenderer>().enabled = !gameObject.GetComponent<SpriteRenderer>().enabled;
+        }
         if (health <= 0) Die();
     }
 
