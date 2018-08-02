@@ -5,7 +5,7 @@
 Core gameplay functionality was ported in 1 day
 
 ### Features to be ported:
-- [ [ Background
+- [ ] Background
 - [ ] Buttons and Menus
 - [ ] Pause Button
 - [ ] Difficulty
@@ -13,3 +13,5 @@ Core gameplay functionality was ported in 1 day
 - [ ] Life System
 
 Sprites designed by [Angela Kim](https://github.com/AngelaKimmy).
+
+Game is playable at: https://Tayler.Tech/SlugShuttle-Unity/
