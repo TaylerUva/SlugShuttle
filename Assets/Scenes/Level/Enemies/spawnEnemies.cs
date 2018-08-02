@@ -37,7 +37,7 @@ public class SpawnEnemies : MonoBehaviour {
         enemyCount += 1;
         randSprite = Random.Range(0, enemySprites.Length - 1);
         enemyObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(enemySprites[randSprite]);
-        randPos = Random.Range(-(width/2), (width/2));
+        randPos = Random.Range(-(width / 2), (width / 2));
         Vector2 position = new Vector2(randPos, height);
         spawnTimer = spawnRate;
         enemyObject.name = ("Enemy" + enemyCount);
