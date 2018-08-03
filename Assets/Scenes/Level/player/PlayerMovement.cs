@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public bool yAxisEnabled = true;
     private int maxSpeed = 10;
     private float moveX;
     private float moveY;
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 pos = transform.position;
         //CONTROLS
         pos.x += Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime;
-        pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
+        if (yAxisEnabled) pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
 
         transform.position = pos;
     }
