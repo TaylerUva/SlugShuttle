@@ -17,6 +17,6 @@ Core gameplay functionality was ported in 1 day
 [Tayler Uva](https://Tayler.Tech)
 
 #### Sprite Designers:
-[Angela Kim](https://github.com/AngelaKimmy).
+[Angela Kim](https://github.com/AngelaKimmy)
 
 Game is playable at: https://Tayler.Tech/SlugShuttle-Unity/
