@@ -12,16 +12,17 @@ public class PlayerShooting : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         cooldownTimer -= Time.deltaTime;
+        if (Time.timeScale != 0) {
+            if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0) {
+                //Shoot
+                cooldownTimer = fireDelay;
 
-        if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0){
-            //Shoot
-            cooldownTimer = fireDelay;
+                Vector3 torpedoPos = transform.position;
+                torpedoPos.y += 1;
+                torpedoPos.z += 1;
 
-            Vector3 torpedoPos = transform.position;
-            torpedoPos.y += 1;
-            torpedoPos.z += 1;
-
-            Instantiate(bulletPrefab, torpedoPos, transform.rotation);
+                Instantiate(bulletPrefab, torpedoPos, transform.rotation);
+            }
         }
 	}
 }
