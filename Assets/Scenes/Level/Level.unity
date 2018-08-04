@@ -1516,7 +1516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1124136227
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1528,8 +1528,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 177711023}
-  - {fileID: 288396351}
   - {fileID: 1717246473}
+  - {fileID: 288396351}
   m_Father: {fileID: 790203292}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1632,7 +1632,7 @@ Prefab:
     - target: {fileID: 224138334163371568, guid: 2db1848340ea340f39209a8db0c4137d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -26.470001
+      value: -26.46997
       objectReference: {fileID: 0}
     - target: {fileID: 224138334163371568, guid: 2db1848340ea340f39209a8db0c4137d,
         type: 2}
@@ -1901,7 +1901,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1124136227}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
