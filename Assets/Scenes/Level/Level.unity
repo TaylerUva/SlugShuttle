@@ -1511,7 +1511,7 @@ GameObject:
   - component: {fileID: 1124136229}
   - component: {fileID: 1124136228}
   m_Layer: 5
-  m_Name: Game Over
+  m_Name: GameOverMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1774,6 +1774,7 @@ MonoBehaviour:
     type: 2}
   lives: 3
   textObject: {fileID: 415628672}
+  gameOverMenu: {fileID: 1124136226}
 --- !u!4 &1434595524
 Transform:
   m_ObjectHideFlags: 0
