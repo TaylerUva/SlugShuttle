@@ -11,6 +11,8 @@ Menu and button functionality was ported in 1 additional day
 - [x] Pause Button
 - [ ] Difficulty
 - [ ] Score System
+- [ ] Sounds
+= [ ] Animations
 - [x] Life System
 - [x] Game Over Screen
 
