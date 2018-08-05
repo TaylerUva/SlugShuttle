@@ -1002,7 +1002,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1085,6 +1085,26 @@ Prefab:
     - target: {fileID: 4596739995053818, guid: be2715ab38b674190a4c43b6c17780ef, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20799758443113976, guid: be2715ab38b674190a4c43b6c17780ef,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 20799758443113976, guid: be2715ab38b674190a4c43b6c17780ef,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 20799758443113976, guid: be2715ab38b674190a4c43b6c17780ef,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 20799758443113976, guid: be2715ab38b674190a4c43b6c17780ef,
+        type: 2}
+      propertyPath: m_BackGroundColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be2715ab38b674190a4c43b6c17780ef, type: 2}
