@@ -48,12 +48,9 @@ public class ScoreSystem : MonoBehaviour {
         UpdateScore();
     }
 
-    public void UpdateHighscore(){
-        if (score > highscore) PlayerPrefs.SetInt("highscore", score);
-    }
-
     private void UpdateScore() {
         scoreText.text = "Score: " + score;
+        if (score > highscore) PlayerPrefs.SetInt("highscore", score);
     }
 
 }
