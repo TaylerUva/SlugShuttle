@@ -2,23 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageHandler : MonoBehaviour {
+public class DamageHandler : GameplayEventSystem {
 
     private float invulnTimer = 0;
     private int invulnLayer = 10;
     private int originalLayer;
-    private ScoreSystem scoreSystem;
     public int health = 1;
 
     // Use this for initialization
     void Start() {
         EventSystemInit();
         originalLayer = gameObject.layer;
-    }
-
-    void EventSystemInit() {
-        scoreSystem = GameObject.Find("EventSystem").GetComponent<ScoreSystem>();
-        if (scoreSystem == null) Debug.LogError("Cannot find 'ScoreSystem' script\nCheck that the script is attached to EventSystem");
     }
 
     private void OnTriggerEnter2D() {
@@ -39,8 +33,8 @@ public class DamageHandler : MonoBehaviour {
             gameObject.GetComponent<SpriteRenderer>().enabled = !gameObject.GetComponent<SpriteRenderer>().enabled;
         }
         if (health <= 0) {
-            if (gameObject.CompareTag("Enemy")) scoreSystem.raiseScore();
-            if (gameObject.CompareTag("Player")) scoreSystem.lowerScore();
+            if (gameObject.CompareTag("Enemy")) ScoreSystem().raiseScore();
+            if (gameObject.CompareTag("Player")) ScoreSystem().lowerScore();
             Die();
         }
     }

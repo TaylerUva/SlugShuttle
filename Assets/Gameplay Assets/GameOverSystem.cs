@@ -8,5 +8,6 @@ public class GameOverSystem : MonoBehaviour {
 
     public void GameOver() {
         gameOverMenu.SetActive(true);
+        Time.timeScale = 0;
     }
 }

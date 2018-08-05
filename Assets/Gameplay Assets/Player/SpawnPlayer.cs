@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnPlayer : MonoBehaviour {
+public class SpawnPlayer : GameplayEventSystem {
 
     public GameObject playerObject;
     public int lives = 3;
     public Text textObject;
-    private GameOverSystem gameOverSystem;
     private bool wasLifeLost = false;
     private GameObject playerInstance;
     private float respawnTimer;
@@ -18,11 +17,6 @@ public class SpawnPlayer : MonoBehaviour {
         EventSystemInit();
         textObject.text = "Lives: " + lives;
         Spawn();
-    }
-
-    void EventSystemInit() {
-        gameOverSystem = GameObject.Find("EventSystem").GetComponent<GameOverSystem>();
-        if (gameOverSystem == null) Debug.LogError("Cannot find 'GameOverSystem' script\nCheck that the script is attached to EventSystem");
     }
 
     void Spawn() {
@@ -44,7 +38,7 @@ public class SpawnPlayer : MonoBehaviour {
                 --lives;
                 wasLifeLost = true;
                 if (lives >= 0) textObject.text = "Lives: " + lives;
-                else gameOverSystem.GameOver();
+                else GameOverSystem().GameOver();
             }
             if (DoneRespawning()){
                 Spawn();
