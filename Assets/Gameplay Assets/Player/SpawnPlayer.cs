@@ -17,8 +17,6 @@ public class SpawnPlayer : MonoBehaviour {
     // Use this for initialization
     void Start() {
         textObject.text = "Lives: " + lives;
-        //isGameOver = false;
-        //gameOver.SetActive(false);
         Spawn();
     }
 

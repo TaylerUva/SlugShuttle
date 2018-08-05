@@ -10,11 +10,12 @@ Menu and button functionality was ported in 1 additional day
 - [x] Buttons and Menus
 - [x] Pause Button
 - [ ] Difficulty
-- [ ] Score System
+- [x] Score System
 - [ ] Sounds
 = [ ] Animations
 - [x] Life System
 - [x] Game Over Screen
+- [x] Screen Bounds
 
 ## Produced by GubSlug Games:
 #### Developers:
