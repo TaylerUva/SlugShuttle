@@ -52,5 +52,4 @@ public class ScoreSystem : MonoBehaviour {
         scoreText.text = "Score: " + score;
         if (score > highscore) PlayerPrefs.SetInt("highscore", score);
     }
-
 }
