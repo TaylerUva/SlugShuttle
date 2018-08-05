@@ -18,7 +18,7 @@ public class ScoreSystem : MonoBehaviour {
         score = 0;
 	}
 
-    public void addScore() {
+    public void raiseScore() {
         switch (difficulty) {
         default:
             score += 10;
@@ -28,6 +28,21 @@ public class ScoreSystem : MonoBehaviour {
             break;
         case 3: 
             score += 50;
+            break;
+        }
+        UpdateScore();
+    }
+
+    public void lowerScore() {
+        switch (difficulty) {
+        default:
+            score -= 10;
+            break;
+        case 2:
+            score -= 30;
+            break;
+        case 3:
+            score -= 50;
             break;
         }
         UpdateScore();

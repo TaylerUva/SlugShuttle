@@ -44,9 +44,8 @@ public class DamageHandler : MonoBehaviour {
             gameObject.GetComponent<SpriteRenderer>().enabled = !gameObject.GetComponent<SpriteRenderer>().enabled;
         }
         if (health <= 0) {
-            if (gameObject.CompareTag("Enemy")) {
-                scoreSystem.addScore();
-            }
+            if (gameObject.CompareTag("Enemy")) scoreSystem.raiseScore();
+            if (gameObject.CompareTag("Player")) scoreSystem.lowerScore();
             Die();
         }
     }

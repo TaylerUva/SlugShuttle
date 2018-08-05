@@ -1479,7 +1479,7 @@ Prefab:
     - target: {fileID: 114987459215569606, guid: f40a1b87067c54a788bef8b29c24cdd1,
         type: 2}
       propertyPath: m_Text
-      value: 'Score:'
+      value: 'Score: 0'
       objectReference: {fileID: 0}
     - target: {fileID: 224946773047171248, guid: f40a1b87067c54a788bef8b29c24cdd1,
         type: 2}
@@ -2054,7 +2054,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: 'Score: 0'
 --- !u!222 &1791670162
 CanvasRenderer:
   m_ObjectHideFlags: 0
