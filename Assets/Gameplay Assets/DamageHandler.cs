@@ -12,18 +12,13 @@ public class DamageHandler : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        EventSystemInit();
         originalLayer = gameObject.layer;
-        scoreSystemInit();
     }
 
-    private void scoreSystemInit(){
-        GameObject scoreSystemObject = GameObject.Find("ScoreSystem");
-        if (scoreSystemObject != null) {
-            scoreSystem = scoreSystemObject.GetComponent<ScoreSystem>();
-        }
-        if (scoreSystem == null) {
-            Debug.Log("Cannot find 'ScoreSystem' script");
-        }
+    void EventSystemInit() {
+        scoreSystem = GameObject.Find("EventSystem").GetComponent<ScoreSystem>();
+        if (scoreSystem == null) Debug.LogError("Cannot find 'ScoreSystem' script\nCheck that the script is attached to EventSystem");
     }
 
     private void OnTriggerEnter2D() {
