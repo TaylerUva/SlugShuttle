@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DamageHandler : GameplayEventSystem {
+public class DamageHandler : EventSystem {
 
     private float invulnTimer = 0;
     private int invulnLayer = 10;
@@ -14,7 +14,6 @@ public class DamageHandler : GameplayEventSystem {
 
     // Use this for initialization
     void Start() {
-        EventSystemInit();
         originalLayer = gameObject.layer;
         healthText = GameObject.Find("Canvas").transform.Find("Health").GetComponent<Text>();
         isPlayer = gameObject.CompareTag("Player");
