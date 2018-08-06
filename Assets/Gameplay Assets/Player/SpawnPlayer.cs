@@ -14,7 +14,7 @@ public class SpawnPlayer : GameplayEventSystem {
 
     // Use this for initialization
     void Start() {
-        lives -= PlayerPrefs.GetInt("difficulty")-1;
+        lives -= PlayerPrefs.GetInt("difficulty", 1)-1;
         EventSystemInit();
         textObject.text = "Lives: " + lives;
         Spawn();
