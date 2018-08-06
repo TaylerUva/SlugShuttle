@@ -9,5 +9,6 @@ public class QuitOnClick : MonoBehaviour {
 #else
         Application.Quit ();
 #endif
+        PlayerPrefs.Save();
     }
 }
