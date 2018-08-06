@@ -35,7 +35,7 @@ public class SpawnEnemies : MonoBehaviour {
     }
 
     private void ResetSpawnTimer(){
-        spawnTimer = baseSpawnRate/PlayerPrefs.GetInt("difficulty");
+        spawnTimer = baseSpawnRate/PlayerPrefs.GetInt("difficulty", 1);
     }
 
     private void Spawn() {

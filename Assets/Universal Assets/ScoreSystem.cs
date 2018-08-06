@@ -15,9 +15,10 @@ public class ScoreSystem : MonoBehaviour {
         highscore = PlayerPrefs.GetInt("highscore", 0);
         difficulty = PlayerPrefs.GetInt("difficulty", 1);
         score = 0;
+        UpdateScore();
     }
 
-    public void raiseScore() {
+    public void RaiseScore() {
         switch (difficulty) {
         default:
             score += 10;
@@ -32,7 +33,7 @@ public class ScoreSystem : MonoBehaviour {
         UpdateScore();
     }
 
-    public void lowerScore() {
+    public void LowerScore() {
         switch (difficulty) {
         default:
             score -= 10;
