@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa92cebae96b74a2cb65d7d97df53f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpawnRate: 3
+  baseSpawnRate: 2
   enemyObject: {fileID: 1645400989647384, guid: eca5a9a8bc64843d2bb8b526b19b3d48,
     type: 2}
 --- !u!1001 &1062412894

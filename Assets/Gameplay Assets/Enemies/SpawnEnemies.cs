@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour {
 
-    public float baseSpawnRate = 3;
+    public float baseSpawnRate = 2;
     public GameObject enemyObject;
     private int difficulty;
     private float cameraWidth;
