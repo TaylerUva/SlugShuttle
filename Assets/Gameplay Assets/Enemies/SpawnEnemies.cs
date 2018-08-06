@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour {
 
-    public float spawnRate = 3;
+    public float baseSpawnRate = 3;
     public GameObject enemyObject;
     private int enemyCount = 0;
+    private int difficulty;
 
     Camera cam;
     float height;
@@ -21,8 +22,9 @@ public class SpawnEnemies : MonoBehaviour {
         cam = Camera.main;
         height = 1.1f * cam.orthographicSize;
         width = height * cam.aspect;
-        spawnTimer = spawnRate;
+        ResetSpawnTimer();
         Spawn();
+        Debug.Log(spawnTimer);
     }
 
     // Update is called once per frame
@@ -33,13 +35,17 @@ public class SpawnEnemies : MonoBehaviour {
         spawnTimer -= Time.deltaTime;
     }
 
+    private void ResetSpawnTimer(){
+        spawnTimer = baseSpawnRate/PlayerPrefs.GetInt("difficulty");
+    }
+
     private void Spawn() {
         enemyCount += 1;
         randSprite = Random.Range(0, enemySprites.Length - 1);
         enemyObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(enemySprites[randSprite]);
         randPos = Random.Range(-(width / 2), (width / 2));
         Vector2 position = new Vector2(randPos, height);
-        spawnTimer = spawnRate;
+        ResetSpawnTimer();
         enemyObject.name = ("Enemy" + enemyCount);
         Instantiate(enemyObject, position, transform.rotation);
     }

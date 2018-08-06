@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class SpawnPlayer : GameplayEventSystem {
 
     public GameObject playerObject;
-    public int lives = 3;
     public Text textObject;
+    private int lives = 3;
     private bool wasLifeLost = false;
     private GameObject playerInstance;
     private float respawnTimer;
 
     // Use this for initialization
     void Start() {
+        lives -= PlayerPrefs.GetInt("difficulty")-1;
         EventSystemInit();
         textObject.text = "Lives: " + lives;
         Spawn();
