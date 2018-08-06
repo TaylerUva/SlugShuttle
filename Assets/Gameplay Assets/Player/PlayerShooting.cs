@@ -6,11 +6,15 @@ public class PlayerShooting : MonoBehaviour {
 
     public GameObject bulletPrefab;
 
-    public float fireDelay = 0.25f;
-    float cooldownTimer = 0;
-	
-	// Update is called once per frame
-	void Update () {
+    private float fireDelay = 0.25f;
+    private float cooldownTimer = 0;
+
+    private void Start() {
+        fireDelay = PlayerPrefs.GetInt("difficulty", 1)/10.0f;
+    }
+
+    // Update is called once per frame
+    void Update () {
         cooldownTimer -= Time.deltaTime;
         if (Time.timeScale != 0) {
             if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0) {
