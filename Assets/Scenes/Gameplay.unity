@@ -1628,7 +1628,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1539202931131006, guid: 9e5b4b5a4eaa64398bdd71b7a78fcd2d,
     type: 2}
-  fireDelay: 0
 --- !u!114 &823851114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,7 +1640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f479bce04d3403eba57ad0d5aca3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 1
   health: 3
 --- !u!50 &823851115
 Rigidbody2D:

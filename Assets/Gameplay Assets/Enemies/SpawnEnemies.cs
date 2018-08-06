@@ -7,28 +7,27 @@ public class SpawnEnemies : MonoBehaviour {
     public float baseSpawnRate = 3;
     public GameObject enemyObject;
     private int difficulty;
-
-    Camera cam;
-    float height;
-    float width;
+    private float cameraWidth;
     private float randPos;
     private int randSprite;
     private string[] enemySprites = { "redGub", "blueGub", "greenGub" };
+    private Vector2 spriteSize;
     private float spawnTimer;
 
     // Use this for initialization
     void Start() {
-        cam = Camera.main;
-        height = 1.1f * cam.orthographicSize;
-        width = height * cam.aspect;
-        ResetSpawnTimer();
-        Spawn();
+        spawnTimer = 0;
+        spriteSize = enemyObject.GetComponent<SpriteRenderer>().bounds.extents;
+        TriggerSpawn();
     }
 
     // Update is called once per frame
     void Update() {
-        height = 1.1f * cam.orthographicSize;
-        width = height * cam.aspect;
+        TriggerSpawn();
+    }
+
+    void TriggerSpawn(){
+        cameraWidth = Camera.main.orthographicSize * Camera.main.aspect;
         if (spawnTimer <= 0) Spawn();
         spawnTimer -= Time.deltaTime;
     }
@@ -40,8 +39,8 @@ public class SpawnEnemies : MonoBehaviour {
     private void Spawn() {
         randSprite = Random.Range(0, enemySprites.Length - 1);
         enemyObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(enemySprites[randSprite]);
-        randPos = Random.Range(-(width / 2), (width / 2));
-        Vector2 position = new Vector2(randPos, height);
+        randPos = Random.Range(-cameraWidth+spriteSize.x, cameraWidth-spriteSize.x);
+        Vector2 position = new Vector2(randPos, 2f * Camera.main.orthographicSize);
         ResetSpawnTimer();
         Instantiate(enemyObject, position, transform.rotation);
     }

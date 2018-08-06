@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public bool yAxisEnabled = true;
-    private int maxSpeed = 10;
+    private float maxSpeed = 10;
     private float moveX;
     private float moveY;
     private float cameraWidth;
