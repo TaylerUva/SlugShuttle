@@ -3,16 +3,17 @@
 ### This is a port of my Swift based game for iOS and macOS [SlugShuttle](https://github.com/TaylerUva/SlugShuttle)
 
 Core gameplay functionality was ported in 1 day
+
 Menu and button functionality was ported in 1 additional day
 
 ### Features to be ported:
 - [ ] Background
 - [x] Buttons and Menus
 - [x] Pause Button
-- [ ] Difficulty
+- [x] Difficulty
 - [x] Score System
 - [ ] Sounds
-= [ ] Animations
+- [ ] Animations
 - [x] Life System
 - [x] Game Over Screen
 - [x] Screen Bounds
