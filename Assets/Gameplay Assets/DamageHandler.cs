@@ -33,8 +33,7 @@ public class DamageHandler : GameplayEventSystem {
             gameObject.GetComponent<SpriteRenderer>().enabled = !gameObject.GetComponent<SpriteRenderer>().enabled;
         }
         if (health <= 0) {
-            if (gameObject.CompareTag("Player")) ScoreSystem().LowerScore();
-            if (gameObject.CompareTag("Enemy")) ScoreSystem().RaiseScore();
+            if (gameObject.CompareTag("Torpedo")) ScoreSystem().RaiseScore();
             Die();
         }
     }
