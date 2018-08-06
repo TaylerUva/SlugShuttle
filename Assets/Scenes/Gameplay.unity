@@ -144,7 +144,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1124136227}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa92cebae96b74a2cb65d7d97df53f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 3
+  baseSpawnRate: 3
   enemyObject: {fileID: 1645400989647384, guid: eca5a9a8bc64843d2bb8b526b19b3d48,
     type: 2}
 --- !u!1001 &1062412894
@@ -1867,8 +1867,8 @@ RectTransform:
   m_Children:
   - {fileID: 177711023}
   - {fileID: 1717246473}
-  - {fileID: 288396351}
   - {fileID: 13895623}
+  - {fileID: 288396351}
   m_Father: {fileID: 790203292}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2241,7 +2241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerObject: {fileID: 1702765223525468, guid: 5354a44db56ad4a4aa5feb99c68ec579,
     type: 2}
-  lives: 0
   textObject: {fileID: 415628672}
 --- !u!4 &1434595524
 Transform:
@@ -2366,6 +2365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 1124136226}
+  pauseButton: {fileID: 1490803306}
 --- !u!1 &1717246472
 GameObject:
   m_ObjectHideFlags: 0
