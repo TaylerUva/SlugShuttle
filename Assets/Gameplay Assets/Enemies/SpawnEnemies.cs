@@ -24,7 +24,6 @@ public class SpawnEnemies : MonoBehaviour {
         width = height * cam.aspect;
         ResetSpawnTimer();
         Spawn();
-        Debug.Log(spawnTimer);
     }
 
     // Update is called once per frame
