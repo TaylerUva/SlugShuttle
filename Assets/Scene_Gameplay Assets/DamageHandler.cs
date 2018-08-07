@@ -48,7 +48,10 @@ public class DamageHandler : EventSystem {
                 // TODO: THIS IS A TEMP FIX TO AVOID HIGHSCORE BUGS
                 ScoreSystem().RaiseScore();
             }
-            if (isPlayer) GameOverSystem().GameOver();
+            if (isPlayer) { 
+                GameOverSystem().GameOver();
+                SoundSystem().PlayGameOver();
+            }
             Die();
         }
     }
