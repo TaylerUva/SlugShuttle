@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EffectsSoundSystem : MonoBehaviour {
 
-    private AudioClip sound;
     private AudioSource source;
 
     void Awake() {

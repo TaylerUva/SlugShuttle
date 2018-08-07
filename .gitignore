@@ -36,9 +36,3 @@ sysinfo.txt
 *.apk
 *.unitypackage
 !docs/*
-Assets/Resources/Audio/TowerFall.mp3
-Assets/Resources/Audio/TowerFall.mp3.meta
-Assets/Resources/Audio/hit.wav
-Assets/Resources/Audio/hit.wav.meta
-Assets/Resources/Audio/shoot.wav
-Assets/Resources/Audio/shoot.wav.meta
