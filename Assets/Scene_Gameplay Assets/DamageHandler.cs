@@ -20,16 +20,15 @@ public class DamageHandler : EventSystem {
         if (isPlayer) {
             health -= PlayerPrefs.GetInt("difficulty", 1) - 1;
             healthText.text = "Health: " + health;
-            Debug.LogWarning("THERE IS A TEMP FIX TO AVOID HIGHSCORE BUGS\nSEE TODO IN THIS CLASS");
         }
     }
 
     private void OnTriggerEnter2D() {
         health--;
-        SoundSystem().PlayHit();
         invulnTimer = 0.5f;
         gameObject.layer = invulnLayer;
         if (isPlayer){
+            SoundSystem().PlayHit();
             healthText.text = "Health: " + health;
         }
     }
@@ -46,7 +45,8 @@ public class DamageHandler : EventSystem {
         }
         if (health <= 0) {
             if (gameObject.CompareTag("Torpedo")) {
-                // TODO: THIS IS A TEMP FIX TO AVOID HIGHSCORE BUGS
+                // TODO: Maybe fix this to use something other than torpedo, an issue can arise if its a multi-hit enemy!
+                SoundSystem().PlayHit();
                 ScoreSystem().RaiseScore();
             }
             if (isPlayer) { 
