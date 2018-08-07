@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverSound: {fileID: 8300000, guid: c27b5f619420548f2a0b2c11f5a17946, type: 3}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: cfb0165404b31488aadb0eaa74ca86c0, type: 3}
   hitSound: {fileID: 0}
 --- !u!82 &1696622281
 AudioSource:
