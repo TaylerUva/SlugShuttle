@@ -2531,6 +2531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866bb2af7d1634b338b49ab70ce77b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverSound: {fileID: 8300000, guid: c27b5f619420548f2a0b2c11f5a17946, type: 3}
+  shootSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!82 &1696622281
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EffectsSoundSystem : MonoBehaviour {
 
+    public AudioClip gameOverSound;
+    public AudioClip shootSound;
+    public AudioClip hitSound;
     private AudioSource source;
 
     void Awake() {
@@ -19,14 +22,14 @@ public class EffectsSoundSystem : MonoBehaviour {
     }
 
     public void PlayGameOver() {
-        source.PlayOneShot(Resources.Load<AudioClip>("Audio/gameOver"), GetEffectsVolume());
+        source.PlayOneShot(gameOverSound, GetEffectsVolume());
     }
 
     public void PlayShoot() {
-        source.PlayOneShot(Resources.Load<AudioClip>("Audio/shoot"), GetEffectsVolume());
+        source.PlayOneShot(shootSound, GetEffectsVolume());
     }
 
     public void PlayHit() {
-        source.PlayOneShot(Resources.Load<AudioClip>("Audio/hit"), GetEffectsVolume());
+        source.PlayOneShot(hitSound, GetEffectsVolume());
     }
 }
