@@ -1,6 +1,6 @@
-# SlugShuttle - Unity Port 🚀
-## Cross-platform built with the Unity Game Engine
-### This is a port of my Swift based game for iOS and macOS [SlugShuttle](https://github.com/TaylerUva/SlugShuttle)
+# SlugShuttle 🚀
+## Cross-platform game built with the Unity Game Engine
+### This is a port of my Swift based game for iOS and macOS [SlugShuttle-Swift](https://github.com/TaylerUva/SlugShuttle-Swift)
 
 Core gameplay functionality was ported in 1 day
 
@@ -12,7 +12,7 @@ Menu and button functionality was ported in 1 additional day
 - [x] Pause Button
 - [x] Difficulty
 - [x] Score System
-- [ ] Sounds
+- [x] Sounds
 - [ ] Animations
 - [x] Life System
 - [x] Game Over Screen
@@ -25,4 +25,4 @@ Menu and button functionality was ported in 1 additional day
 #### Sprite Designers:
 [Angela Kim](https://github.com/AngelaKimmy)
 
-Game is playable at: https://Tayler.Tech/SlugShuttle-Unity/
+Game is playable at: https://Tayler.Tech/SlugShuttle/
