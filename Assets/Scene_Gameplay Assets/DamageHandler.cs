@@ -26,6 +26,7 @@ public class DamageHandler : EventSystem {
 
     private void OnTriggerEnter2D() {
         health--;
+        SoundSystem().PlayHit();
         invulnTimer = 0.5f;
         gameObject.layer = invulnLayer;
         if (isPlayer){
@@ -49,8 +50,8 @@ public class DamageHandler : EventSystem {
                 ScoreSystem().RaiseScore();
             }
             if (isPlayer) { 
-                GameOverSystem().GameOver();
                 SoundSystem().PlayGameOver();
+                GameOverSystem().GameOver();
             }
             Die();
         }

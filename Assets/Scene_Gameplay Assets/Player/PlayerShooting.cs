@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour {
+public class PlayerShooting : EventSystem {
 
     public GameObject bulletPrefab;
 
@@ -24,8 +24,8 @@ public class PlayerShooting : MonoBehaviour {
                 Vector3 torpedoPos = transform.position;
                 torpedoPos.y += 1;
                 torpedoPos.z += 1;
-
                 Instantiate(bulletPrefab, torpedoPos, transform.rotation);
+                SoundSystem().PlayShoot();
             }
         }
 	}

@@ -6,22 +6,40 @@ public class SoundSystem : MonoBehaviour {
 
     private AudioClip sound;
     private AudioSource source;
-    private float volLowRange = .5f;
-    private float volHighRange = 1.0f;
 
     void Awake() {
-        source = GetComponent<AudioSource>();;
+        source = GetComponent<AudioSource>();
         if (source == null) {
             Debug.Break();
             throw new MissingComponentException("AudioSource component could not be found!\nCheck that the component is attached to EventSystem for this scene");
         }
+        PlayMusic();
     }
 
-    public float CheckEffectVolume(){
+    public float GetEffectsVolume() {
         return PlayerPrefs.GetFloat("effectVolume", 1.0f);
     }
 
+    public float GetMusicVolume() {
+        return PlayerPrefs.GetFloat("musicVolume", 1.0f);
+    }
+
+    public void PlayMusic() {
+        source.loop = true;
+        source.clip = Resources.Load<AudioClip>("Audio/TowerFall");
+        source.volume = GetMusicVolume();
+        source.Play();
+    }
+
     public void PlayGameOver() {
-        source.PlayOneShot(Resources.Load<AudioClip>("Audio/gameOver"), CheckEffectVolume());
+        source.PlayOneShot(Resources.Load<AudioClip>("Audio/gameOver"), GetEffectsVolume());
+    }
+
+    public void PlayShoot() {
+        source.PlayOneShot(Resources.Load<AudioClip>("Audio/shoot"), GetEffectsVolume());
+    }
+
+    public void PlayHit() {
+        source.PlayOneShot(Resources.Load<AudioClip>("Audio/hit"), GetEffectsVolume());
     }
 }
