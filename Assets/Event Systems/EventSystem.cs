@@ -6,7 +6,7 @@ public class EventSystem : MonoBehaviour {
 
     private GameOverSystem gameOverSystem;
     private ScoreSystem scoreSystem;
-    private SoundSystem soundSystem;
+    private EffectsSoundSystem soundSystem;
     private string errorString = " script could not be found!\nCheck that the script is attached to EventSystem for this scene";
 
     public GameOverSystem GameOverSystem() {
@@ -27,8 +27,8 @@ public class EventSystem : MonoBehaviour {
         return scoreSystem;
     }
 
-    public SoundSystem SoundSystem() {
-        soundSystem = GameObject.Find("EventSystem").GetComponent<SoundSystem>();
+    public EffectsSoundSystem SoundSystem() {
+        soundSystem = GameObject.Find("EventSystem").GetComponent<EffectsSoundSystem>();
         if (soundSystem == null) {
             Debug.Break();
             throw new MissingComponentException("SoundSystem" + errorString);
