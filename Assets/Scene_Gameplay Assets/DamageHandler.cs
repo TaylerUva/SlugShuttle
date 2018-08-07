@@ -20,6 +20,7 @@ public class DamageHandler : EventSystem {
         if (isPlayer) {
             health -= PlayerPrefs.GetInt("difficulty", 1) - 1;
             healthText.text = "Health: " + health;
+            Debug.LogWarning("THERE IS A TEMP FIX TO AVOID HIGHSCORE BUGS\nSEE TODO IN THIS CLASS");
         }
     }
 
@@ -44,9 +45,8 @@ public class DamageHandler : EventSystem {
         }
         if (health <= 0) {
             if (gameObject.CompareTag("Torpedo")) {
-                //!!!!!! THIS IS A TEMP FIX TO AVOID HIGHSCORE BUGS
+                // TODO: THIS IS A TEMP FIX TO AVOID HIGHSCORE BUGS
                 ScoreSystem().RaiseScore();
-                Debug.LogWarning("THIS IS A TEMP FIX TO AVOID HIGHSCORE BUGS");
             }
             if (isPlayer) GameOverSystem().GameOver();
             Die();

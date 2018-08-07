@@ -38,7 +38,7 @@ public class SpawnEnemies : MonoBehaviour {
 
     private void Spawn() {
         randSprite = Random.Range(0, enemySprites.Length - 1);
-        enemyObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(enemySprites[randSprite]);
+        enemyObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/"+enemySprites[randSprite]);
         randPos = Random.Range(-cameraWidth+spriteSize.x, cameraWidth-spriteSize.x);
         Vector2 position = new Vector2(randPos, 2f * Camera.main.orthographicSize);
         ResetSpawnTimer();
