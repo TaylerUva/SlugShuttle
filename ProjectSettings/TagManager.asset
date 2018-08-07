@@ -8,6 +8,7 @@ TagManager:
   - MainCanvas
   - Torpedo
   - EventSystem
+  - DontDestroyMusic
   layers:
   - Default
   - TransparentFX
