@@ -12,22 +12,30 @@ public class BGScroll : MonoBehaviour {
 
     void Start() {
         savedOffset = GetComponent<Renderer>().sharedMaterial.GetTextureOffset("_MainTex");
+        GetScaleValue();
         MaximizeToCamera();
-
     }
 
     void MaximizeToCamera(){
+        GetComponent<Renderer>().transform.localScale = new Vector3(GetScaleValue(),  GetScaleValue());
+    }
+
+    float GetScaleValue() {
         cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
         cameraHeight = 2f * Camera.main.orthographicSize;
-        scaleValue = cameraWidth > cameraHeight ? cameraWidth : cameraHeight;
-        GetComponent<Renderer>().transform.localScale = new Vector3(scaleValue, scaleValue);
+        return scaleValue = cameraWidth > cameraHeight ? cameraWidth : cameraHeight;
     }
 
     void Update() {
-        MaximizeToCamera();
-        float y = Mathf.Repeat( ScrollSpeed() * Time.time, 1);
+        float y = Mathf.Repeat(ScrollSpeed() * Time.time, 1);
         Vector2 offset = new Vector2(savedOffset.x, y);
         GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", offset);
+    }
+
+    private void LateUpdate() {
+        if (scaleValue != GetScaleValue()) {
+            MaximizeToCamera();
+        }
     }
 
     void OnDisable() {
