@@ -7,7 +7,7 @@ Core gameplay functionality was ported in 1 day
 Menu and button functionality was ported in 1 additional day
 
 ### Features to be ported:
-- [ ] Background
+- [X] Background
 - [x] Buttons and Menus
 - [x] Pause Button
 - [x] Difficulty
@@ -17,6 +17,9 @@ Menu and button functionality was ported in 1 additional day
 - [x] Life System
 - [x] Game Over Screen
 - [x] Screen Bounds
+
+### New Features to add:
+- [ ] Game Modes
 
 ## Produced by GubSlug Games:
 #### Developers:
