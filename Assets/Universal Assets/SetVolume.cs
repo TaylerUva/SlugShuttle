@@ -25,6 +25,6 @@ public class SetVolume : MonoBehaviour {
 
     private void SetSliderPosition(){
         if (isMusicSlider) GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 1.0f);
-        else GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1.0f);
+        else GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 0.5f);
     }
 }

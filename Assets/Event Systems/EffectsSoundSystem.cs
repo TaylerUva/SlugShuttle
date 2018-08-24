@@ -18,7 +18,7 @@ public class EffectsSoundSystem : MonoBehaviour {
     }
 
     public float GetEffectsVolume() {
-        return PlayerPrefs.GetFloat("effectsVolume", 1.0f);
+        return PlayerPrefs.GetFloat("effectsVolume", 0.5f);
     }
 
     public void PlayGameOver() {

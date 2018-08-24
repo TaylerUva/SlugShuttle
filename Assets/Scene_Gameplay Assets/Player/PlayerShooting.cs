@@ -25,7 +25,7 @@ public class PlayerShooting : EventSystem {
                 torpedoPos.y += 1;
                 torpedoPos.z += 1;
                 Instantiate(bulletPrefab, torpedoPos, transform.rotation);
-                SoundSystem().PlayShoot();
+                EffectsSoundSystem().PlayShoot();
             }
         }
 	}
