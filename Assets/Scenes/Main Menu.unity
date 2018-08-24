@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 1141820721}
   - component: {fileID: 1141820720}
   - component: {fileID: 1141820719}
+  - component: {fileID: 1141820723}
   m_Layer: 1
   m_Name: BGArt
   m_TagString: Untagged
@@ -1096,8 +1097,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1141820717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.50288, y: 10.50288, z: 10.50288}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 10, y: 20, z: 10.50288}
   m_Children: []
   m_Father: {fileID: 1046372849}
   m_RootOrder: 0
@@ -1108,12 +1109,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1141820717}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1af64266489084d2387945b021f2b243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseScrollSpeed: 1
+  scrollSpeed: 0
 --- !u!64 &1141820720
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1170,6 +1171,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1141820717}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1141820723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1141820717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af64266489084d2387945b021f2b243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 2
 --- !u!1 &1437954850
 GameObject:
   m_ObjectHideFlags: 0

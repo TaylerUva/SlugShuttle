@@ -4,49 +4,34 @@ using UnityEngine;
 
 public class BGScroll : MonoBehaviour {
 
-    public float baseScrollSpeed = 5;
+    public float scrollSpeed;
+
     private float cameraWidth;
     private float cameraHeight;
     private float scaleValue;
-    private Vector2 savedOffset;
+
+    private Vector3 startPosition;
 
     void Start() {
-        savedOffset = GetComponent<Renderer>().sharedMaterial.GetTextureOffset("_MainTex");
-        GetScaleValue();
-        MaximizeToCamera();
-    }
-
-    void MaximizeToCamera(){
-        GetComponent<Renderer>().transform.localScale = new Vector3(GetScaleValue(),  GetScaleValue());
-    }
-
-    float GetScaleValue() {
-        cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
-        cameraHeight = 2f * Camera.main.orthographicSize;
-        return scaleValue = cameraWidth > cameraHeight ? cameraWidth : cameraHeight;
+        startPosition = transform.position;
     }
 
     void Update() {
-        float y = Mathf.Repeat(ScrollSpeed() * Time.time, 1);
-        Vector2 offset = new Vector2(savedOffset.x, y);
-        GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", offset);
+        transform.localScale = new Vector3(CameraSize().x, 2*CameraSize().y);
+        GetComponent<Renderer>().sharedMaterial.SetTextureScale("_MainTex", new Vector2(CameraSize().x/10, 2*CameraSize().y/10));
+        float newPosition = Mathf.Repeat(Time.time * scrollSpeed, transform.localScale.y/2);
+        transform.position = startPosition + Vector3.down * newPosition;
     }
 
-    private void LateUpdate() {
-        if (scaleValue != GetScaleValue()) {
-            MaximizeToCamera();
-        }
+    Vector2 CameraSize() {
+        cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
+        cameraHeight = 2f * Camera.main.orthographicSize;
+        return new Vector2(cameraWidth,cameraHeight);
     }
 
-    void OnDisable() {
-        GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", savedOffset);
-    }
-
-    float ScrollSpeed(){
-        switch (PlayerPrefs.GetInt("difficulty", 1)){
-            default: return 0.4f;
-            case 2: return 0.475f;
-            case 3: return 0.55f;
-        }
+    Vector2 GetCameraSize() {
+        cameraWidth = Camera.main.orthographicSize * Camera.main.aspect * 2f;
+        cameraHeight = 2f * Camera.main.orthographicSize;
+        return new Vector2(cameraWidth, cameraHeight);
     }
 }
