@@ -17,6 +17,7 @@ Menu and button functionality was ported in 1 additional day
 - [x] Life System
 - [x] Game Over Screen
 - [x] Screen Bounds
+- [ ] Life Gain
 
 ### New Features to add:
 - [ ] Game Modes
