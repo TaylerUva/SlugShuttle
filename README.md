@@ -1,5 +1,5 @@
 # SlugShuttle 🚀
-## Cross-platform game built with the Unity Game Engine
+## Cross-platform game built with the [Unity Game Engine](https://unity3d.com)
 ### This is a port of my Swift based game for iOS and macOS [SlugShuttle-Swift](https://github.com/TaylerUva/SlugShuttle-Swift)
 
 Core gameplay functionality was ported in 1 day
