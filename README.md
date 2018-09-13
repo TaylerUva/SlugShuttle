@@ -21,6 +21,7 @@ Menu and button functionality was ported in 1 additional day
 
 ### New Features to add:
 - [ ] Game Modes
+- [ ] Abilities or weapon unlocks
 
 ## Produced by GubSlug Games:
 #### Developers:
