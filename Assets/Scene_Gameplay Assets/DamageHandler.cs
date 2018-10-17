@@ -28,7 +28,7 @@ public class DamageHandler : EventSystem {
         invulnTimer = 0.5f;
         gameObject.layer = invulnLayer;
         if (isPlayer){
-            EffectsSoundSystem().PlayHit();
+            EffectsSoundSystem().PlayerHit();
             healthText.text = "Health: " + health;
         }
     }
@@ -46,7 +46,7 @@ public class DamageHandler : EventSystem {
         if (health <= 0) {
             if (gameObject.CompareTag("Torpedo")) {
                 // TODO: Maybe fix this to use something other than torpedo, an issue can arise if its a multi-hit enemy!
-                EffectsSoundSystem().PlayHit();
+                EffectsSoundSystem().PlayerHit();
                 ScoreSystem().RaiseScore();
             }
             if (isPlayer) { 

@@ -29,7 +29,7 @@ public class EffectsSoundSystem : MonoBehaviour {
         source.PlayOneShot(shootSound, GetEffectsVolume());
     }
 
-    public void PlayHit() {
+    public void PlayerHit() {
         source.PlayOneShot(hitSound, GetEffectsVolume());
     }
 }
