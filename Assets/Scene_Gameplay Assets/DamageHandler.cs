@@ -27,7 +27,7 @@ public class DamageHandler : EventSystem {
         health--;
         invulnTimer = 0.5f;
         gameObject.layer = invulnLayer;
-        if (isPlayer){
+        if (isPlayer) {
             EffectsSoundSystem().PlayerHit();
             healthText.text = "Health: " + health;
         }
@@ -59,5 +59,14 @@ public class DamageHandler : EventSystem {
 
     private void Die() {
         Destroy(gameObject);
+    }
+
+    private void OnDestroy() {
+        if (GameModeSystem().GetGameMode() == global::GameModeSystem.GameMode.CLASSIC && CompareTag("Enemy")) {
+            //EffectsSoundSystem().PlayerHit();
+            health--;
+            invulnTimer = 0.5f;
+            Debug.Log("Destroyed from DamageHandler Class: Health" + health);
+        }
     }
 }

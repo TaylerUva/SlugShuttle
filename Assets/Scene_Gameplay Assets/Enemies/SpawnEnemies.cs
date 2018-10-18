@@ -40,7 +40,7 @@ public class SpawnEnemies : MonoBehaviour {
         randSprite = Random.Range(0, enemySprites.Length);
         enemyObject.GetComponent<SpriteRenderer>().sprite = enemySprites[randSprite];
         randPos = Random.Range(-cameraWidth+spriteSize.x, cameraWidth-spriteSize.x);
-        Vector2 position = new Vector2(randPos, 2f * Camera.main.orthographicSize);
+        Vector2 position = new Vector2(randPos, Camera.main.orthographicSize+spriteSize.y);
         ResetSpawnTimer();
         Instantiate(enemyObject, position, transform.rotation);
     }

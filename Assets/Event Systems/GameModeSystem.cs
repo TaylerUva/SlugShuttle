@@ -7,6 +7,11 @@ public class GameModeSystem : MonoBehaviour {
     public enum GameMode { CLASSIC, SURVIVAL };
     private int currentGameMode;
 
+    private void Start() {
+        Debug.LogWarning("TESTING HERE");
+        SetGameMode(0);
+    }
+
     public void SetGameMode(GameMode mode){
         int modeValue;
         switch (mode){
