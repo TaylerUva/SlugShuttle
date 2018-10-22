@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class SelfDestruct : EventSystem {
 	
-	// Update is called once per frame
-	void Update () {
+    Vector3 spriteSize;
+
+    void Start() {
+        spriteSize = GetComponent<SpriteRenderer>().bounds.extents;
+    }
+
+	void LateUpdate () {
         float cameraHeightCord = Camera.main.orthographicSize;
-        Vector3 spriteSize = GetComponent<SpriteRenderer>().bounds.extents;
         if (transform.position.y < -(cameraHeightCord+spriteSize.y) && CompareTag("Enemy")) Destroy(gameObject);
         if (transform.position.y > (cameraHeightCord + spriteSize.y) && CompareTag("Torpedo")) Destroy(gameObject);
 
