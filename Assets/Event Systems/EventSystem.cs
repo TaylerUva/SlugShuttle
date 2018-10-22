@@ -8,6 +8,7 @@ public class EventSystem : MonoBehaviour {
     private ScoreSystem scoreSystem;
     private EffectsSoundSystem effectsSoundSystem;
     private GameModeSystem gameModeSystem;
+    private PlayerDamageHandler playerDamageHandler;
     private string errorString = " script could not be found!\nCheck that the script is attached to EventSystem for this scene";
 
     public GameOverSystem GameOverSystem() {

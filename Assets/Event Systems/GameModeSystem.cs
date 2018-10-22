@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GameModeSystem : MonoBehaviour {
 
-    public enum GameMode { CLASSIC, SURVIVAL };
+    public enum GameMode { CLASSIC, SURVIVAL, PROTECTION };
     private int currentGameMode;
 
     private void Start() {
         Debug.LogWarning("TESTING HERE");
-        SetGameMode(0);
+        SetGameMode(GameMode.SURVIVAL);
     }
 
     public void SetGameMode(GameMode mode){
@@ -19,6 +19,8 @@ public class GameModeSystem : MonoBehaviour {
             modeValue = 0; break;
         case GameMode.SURVIVAL:
             modeValue = 1; break;
+        case GameMode.PROTECTION:
+            modeValue = 2; break;
         default:
             modeValue = 0; break;
         }
@@ -33,6 +35,8 @@ public class GameModeSystem : MonoBehaviour {
             newGameMode = GameMode.CLASSIC; break;
         case 1:
             newGameMode = GameMode.SURVIVAL; break;
+        case 2:
+            newGameMode = GameMode.PROTECTION; break;
         default:
             newGameMode = GameMode.CLASSIC; break;
         }
