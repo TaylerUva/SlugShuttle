@@ -51,6 +51,17 @@
         "Obj/":true,
         "ProjectSettings/":true,
         "temp/":true,
-        "Temp/":true
+        "Temp/":true,
+        // User Hidden from sidebar
+        "**/Media":true,
+        "**/Scenes":true,
+        "**/builds":true,
+        "**/SlugShuttle Unity.csproj":true,
+        "**/Assembly-CSharp.csproj":true,
+        "**/SlugShuttle.csproj":true,
+        "**/SlugShuttle Unity.sln":true,
+        "**/SlugShuttle.sln":true,
+        "**/.gitattributes":true,
+        "**/.vs":true,
     }
 }
