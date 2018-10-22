@@ -7,7 +7,6 @@ public class EventSystem : MonoBehaviour {
     private GameOverSystem gameOverSystem;
     private ScoreSystem scoreSystem;
     private EffectsSoundSystem effectsSoundSystem;
-    private GameModeSystem gameModeSystem;
     private PlayerDamageHandler playerDamageHandler;
     private string errorString = " script could not be found!\nCheck that the script is attached to EventSystem for this scene";
 
@@ -36,14 +35,5 @@ public class EventSystem : MonoBehaviour {
             throw new MissingComponentException("EffectsSoundSystem" + errorString);
         }
         return effectsSoundSystem;
-    }
-
-    public GameModeSystem GameModeSystem(){
-        gameModeSystem = GameObject.Find("EventSystem").GetComponent<GameModeSystem>();
-        if (gameModeSystem == null) {
-            Debug.Break();
-            throw new MissingComponentException("GameModeSystem" + errorString);
-        }
-        return gameModeSystem;
     }
 }

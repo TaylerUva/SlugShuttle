@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelfDestruct : EventSystem {
+public class SelfDestruct : MonoBehaviour {
 	
     Vector3 spriteSize;
 
@@ -12,10 +12,13 @@ public class SelfDestruct : EventSystem {
 
 	void Update () {
         float cameraHeightCord = Camera.main.orthographicSize;
-        if (transform.position.y < -(cameraHeightCord-spriteSize.y) && CompareTag("Enemy")) {
-            if (GameModeSystem().GetGameMode() == global::GameModeSystem.GameMode.PROTECTION) DamagePlayer();
-            if (transform.position.y < -(cameraHeightCord+spriteSize.y)) Destroy(gameObject);
-        } 
+        if (CompareTag("Enemy")){
+            if (transform.position.y < -(cameraHeightCord-spriteSize.y) && PlayerPrefs.GetInt("gameMode") == 2) {
+                DamagePlayer();
+                Destroy(gameObject);
+            }
+            else if (transform.position.y < -(cameraHeightCord+spriteSize.y) && CompareTag("Enemy")) Destroy(gameObject);
+        }
         if (transform.position.y > (cameraHeightCord + spriteSize.y) && CompareTag("Torpedo")) Destroy(gameObject);
     }
 
