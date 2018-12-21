@@ -27,7 +27,7 @@ Menu and button functionality was ported in 1 additional day
 #### Developers:
 [Tayler Uva](https://Tayler.Tech)
 
-#### Sprite Designers:
+#### Sprite and Sound Designers:
 [Angela Kim](https://github.com/AngelaKimmy)
 
 Game is playable at: https://Tayler.Tech/SlugShuttle/
