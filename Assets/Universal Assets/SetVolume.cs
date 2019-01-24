@@ -1,30 +1,30 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SetVolume : MonoBehaviour {
 
-    public bool isMusicSlider = false;
+	public bool isMusicSlider = false;
 
-    private void Start() {
-        SetSliderPosition();
-    }
+	private void Start() {
+		SetSliderPosition();
+	}
 
-    public void SetEffectsVolume(float sliderValue) {
-        PlayerPrefs.SetFloat("effectsVolume", sliderValue);
-    }
+	public void SetEffectsVolume(float sliderValue) {
+		PlayerPrefs.SetFloat("effectsVolume", sliderValue);
+	}
 
-    public void SetMusicVolume(float sliderValue) {
-        PlayerPrefs.SetFloat("musicVolume", sliderValue);
-    }
+	public void SetMusicVolume(float sliderValue) {
+		PlayerPrefs.SetFloat("musicVolume", sliderValue);
+	}
 
-    private void OnDestroy() {
-        SetSliderPosition();
-    }
+	private void OnDestroy() {
+		SetSliderPosition();
+	}
 
-    private void SetSliderPosition(){
-        if (isMusicSlider) GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 0.5f);
-        else GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 0.5f);
-    }
+	private void SetSliderPosition() {
+		if (isMusicSlider) GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 0.5f);
+		else GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 0.5f);
+	}
 }

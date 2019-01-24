@@ -1,14 +1,14 @@
-﻿using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class QuitOnClick : MonoBehaviour {
 
-    public void Quit() {
+	public void Quit() {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+		UnityEditor.EditorApplication.isPlaying = false;
 #else
-        Application.Quit ();
+		Application.Quit();
 #endif
-        PlayerPrefs.Save();
-    }
+		PlayerPrefs.Save();
+	}
 }
