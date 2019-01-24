@@ -17,6 +17,7 @@ public class SpawnEnemies : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		spawnTimer = 0;
+		if (PlayerPrefs.GetInt("gameMode", 1) == 3) baseSpawnRate = 1;
 		spriteSize = enemyObject.GetComponent<SpriteRenderer>().bounds.extents;
 		TriggerSpawn();
 	}

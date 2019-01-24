@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour {
 	private float moveX;
 	private float moveY;
 	private float cameraWidth;
+	private int gameMode;
+
+	private void Start() {
+		gameMode = PlayerPrefs.GetInt("gameMode", 1);
+	}
 
 	// Update is called once per frame
 	void Update() {
@@ -24,8 +29,13 @@ public class PlayerMovement : MonoBehaviour {
 		if (yAxisEnabled) pos.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
 
 		// SCREEN BOUNDS
-		if ((pos.x) > cameraWidth) pos.x = -cameraWidth;
-		if ((pos.x) < -cameraWidth) pos.x = cameraWidth;
+		if (gameMode != 3) {
+			if ((pos.x) > cameraWidth) pos.x = -cameraWidth;
+			if ((pos.x) < -cameraWidth) pos.x = cameraWidth;
+		} else {
+			if ((pos.x) > cameraWidth) pos.x = cameraWidth;
+			if ((pos.x) < -cameraWidth) pos.x = -cameraWidth;
+		}
 
 		transform.position = pos;
 	}
