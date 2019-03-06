@@ -9,7 +9,7 @@ html{
 	width: device-width;
 	max-width: 90%;
 	margin: auto;
-	background-image: url('../bg.png');
+	background-image: url('../bg.jpeg');
 }
 
 nav{
@@ -30,8 +30,8 @@ header{
 		margin: 20px auto 10px auto;
 		padding: 10px;
 		border-radius: 10px;
-		background-color:#552C12;
-		color: #991A36;
+		background-color:#FF5723;
+		color: black;
 	}
 
 footer{
@@ -39,7 +39,7 @@ footer{
 	text-align: center;
 	margin: auto;
 	border-radius: 10px;
-	background-color:#552C12;
+	background-color:#FF5723;
 	color: white;
 }
 
@@ -53,11 +53,11 @@ img{
 body{
 	font-family: play;
 	color: white;
-	border: 5px solid #552C12;;
+	border: 5px solid #FF5723;
 	padding: 10px;
 	margin: 10px;
 	border-radius: 10px;
-	background-color: rgba(12, 47, 94, 0.95);
+	background-color: rgba(44, 44, 44, .95);
 }
 
 a{
@@ -65,14 +65,14 @@ a{
 }
 
 p.imgBg{
-	border: 5px solid #552C12;;
+	border: 5px solid #FF5723;
 	padding: 10px;
 	margin: 10px;
 	border-radius: 10px;
 }
 
 div.border{
-	border: 5px solid #552C12;;
+	border: 5px solid #FF5723;
 	padding: 10px;
 	max-width: 90%;
 	margin: 20px auto 10px auto;
@@ -80,7 +80,7 @@ div.border{
 }
 
 div.subborder{
-	border: 5px solid #552C12;;
+	border: 5px solid #FF5723;
 	width: 500px;
 	border-radius: 10px;
 }
@@ -93,7 +93,7 @@ ul {
 	padding: 0;
 	max-width: 93%;
 	overflow: hidden;
-	background-color: #552C12;;
+	background-color: #FF5723;
 	border-radius: 10px;
 }
 
@@ -110,11 +110,11 @@ li a {
 }
 
 li a:hover:not(.active) {
-	color: #552C12;;
+	color: #FF5723;
 	background-color: white;
 }
 
 .active {
-	background-color: #991A36;
+	background-color: black;
 }
 
