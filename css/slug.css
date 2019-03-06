@@ -85,6 +85,32 @@ div.subborder{
 	border-radius: 10px;
 }
 
+/* Play Button */
+div.play{
+	list-style-type: none;
+	margin: 10px auto auto auto;
+	padding: 0;
+	max-width: 30%;
+	overflow: hidden;
+	background-color: #FF5723;
+	border-radius: 10px;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	
+}
+div.play a {
+	font-size: xx-large;
+	text-decoration: none;
+}
+div.play:hover:not(.active) {
+	color: #FF5723;
+	background-color: white;
+}
+/* Play Button */
+
 /* NAV BAR */
 
 ul {
