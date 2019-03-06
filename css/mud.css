@@ -1,0 +1,120 @@
+@font-face { font-family: play; src: url('../fonts/Play-Regular.ttf'); }
+@font-face { font-family: jura; src: url('../fonts/Jura-Regular.ttf'); }
+@font-face { font-family: circuit; src: url('../fonts/CIRCUIT.ttf'); }
+@font-face { font-family: gunship-con; src: url('../fonts/gunship-condensed.ttf'); }
+@font-face { font-family: gunship-reg; src: url('../fonts/gunship-Reg.ttf'); }
+@font-face { font-family: gunship; src: url('../fonts/gunship-condensed-italic.ttf'); font-style: italic;}
+
+html{
+	width: device-width;
+	max-width: 90%;
+	margin: auto;
+	background-image: url('../bg.png');
+}
+
+nav{
+	font-family: gunship-con;
+	text-align: center;
+}
+
+header{
+	text-align: center;
+	font-family: gunship;
+	font-style: italic;
+}	
+	header.back{
+		text-align: left;
+		font-family: gunship-con;
+		font-style: normal;
+		max-width: 91%;
+		margin: 20px auto 10px auto;
+		padding: 10px;
+		border-radius: 10px;
+		background-color:#552C12;
+		color: #991A36;
+	}
+
+footer{
+	font-family: gunship-con;
+	text-align: center;
+	margin: auto;
+	border-radius: 10px;
+	background-color:#552C12;
+	color: white;
+}
+
+img{
+	max-width: 100%;
+}
+	img.pad{
+			padding: 2%;
+	}
+
+body{
+	font-family: play;
+	color: white;
+	border: 5px solid #552C12;;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: rgba(12, 47, 94, 0.95);
+}
+
+a{
+	color: inherit;
+}
+
+p.imgBg{
+	border: 5px solid #552C12;;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+div.border{
+	border: 5px solid #552C12;;
+	padding: 10px;
+	max-width: 90%;
+	margin: 20px auto 10px auto;
+	border-radius: 10px;
+}
+
+div.subborder{
+	border: 5px solid #552C12;;
+	width: 500px;
+	border-radius: 10px;
+}
+
+/* NAV BAR */
+
+ul {
+	list-style-type: none;
+	margin: 10px auto auto auto;
+	padding: 0;
+	max-width: 93%;
+	overflow: hidden;
+	background-color: #552C12;;
+	border-radius: 10px;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	color: #552C12;;
+	background-color: white;
+}
+
+.active {
+	background-color: #991A36;
+}
+
