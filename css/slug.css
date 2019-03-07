@@ -86,33 +86,35 @@ div.subborder{
 }
 
 /* Play Button */
-div.play{
+.play {
 	list-style-type: none;
 	margin: 10px auto auto auto;
 	padding: 0;
-	max-width: 30%;
+	max-width: 40%;
 	overflow: hidden;
 	background-color: #FF5723;
 	border-radius: 10px;
+}
+
+.play li {
+	float: none;
+	font-size: xx-large
+}
+
+.play li a {
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	
 }
-div.play a {
-	font-size: xx-large;
-	text-decoration: none;
-}
-div.play:hover:not(.active) {
+
+.play li a:hover:not(.active) {
 	color: #FF5723;
 	background-color: white;
 }
-/* Play Button */
 
 /* NAV BAR */
-
 ul {
 	list-style-type: none;
 	margin: 10px auto auto auto;
